@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>粒子服务器 - MC</title>
+<style>
+*{box-sizing:border-box;}
+body{background:#ffffff;color:#333;font-family:Arial,sans-serif;margin:0;padding:20px;}
+.container{display:flex;gap:20px;max-width:1000px;margin:0 auto;}
+.left{flex:1;}
+.right{flex:1;}
+.card{background:#f8f9fa;border-radius:12px;padding:24px;border:1px solid #eee;margin-bottom:16px;}
+h1{color:#222;margin-top:0;font-size:22px;}
+.item{margin:8px 0;color:#555;}
+.title{color:#007bff;}
+.chat-box{height:300px;overflow-y:auto;background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px;margin-bottom:12px;}
+.chat-input{width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;outline:none;}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <div class="card">
+      <h1>🎮 MC 粒子服务器</h1>
+      <div class="item"><span class="title">版本：</span>Java 1.21.11</div>
+      <div class="item"><span class="title">地址：</span>play.simpfun.cn:41684</div>
+      <div class="item"><span class="title">模式：</span>纯净生存 | 休闲</div>
+      <div class="item"><span class="title">状态：</span>在线中(假的)</div>
+      <div class="item"><span class="title">在线人数：</span>实时更新（假的）</div>
+    </div>
+    <div class="card">
+      <h1>📢 官方QQ群</h1>
+      <div class="item">QQ群号：2158064532</div>
+      <div class="item">群主QQ：1073728718</div>
+      <div class="item">进群交流、领取福利、开服通知</div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="card">
+      <h1>📩 意见箱 · 玩家请求</h1>
+      <div class="chat-box" id="chat">
+           请求记录
+           虽然没有后台服务器. . .
+      </div>
+      <input class="chat-input" placeholder="输入你的请求或建议..." onkeydown="if(event.key==='Enter')sendChat()">
+    </div>
+    <div class="card">
+      <h1>💖 赞助支持</h1>
+      <div class="item">服务器维持与更新</div>
+      <div class="item">感谢各位玩家支持</div>
+      <div class="item">网站提供: LaoDay_(服务器管理)</div>
+    </div>
+  </div>
+</div>
+<script>
+function sendChat(){
+  let i=document.querySelector('.chat-input');
+  if(i.value.trim()){
+    let c=document.getElementById('chat');
+    c.innerHTML+='<p>玩家请求：'+i.value+'</p>';
+    i.value='';
+    c.scrollTop=c.scrollHeight;
+  }
+}
+</script>
+</body>
+</html>
